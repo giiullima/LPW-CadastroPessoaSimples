@@ -1,14 +1,13 @@
-<h1>Cadastro de Pessoas</h1>
+<h1>Gerenciador de Tarefas</h1>
 
 <form ngForm name="cadastro">
-  <p>Nome:<input type="text" name="nome"
-    [(ngModel)]="nome">
-  <button (click)="adicionar()">OK</button></p>
+  <input type="text" name="titulo" 
+  [(ngModel)]="titulo">
+  <button (click)="adicionar()">OK</button>
 </form>
 
 <ul>
-  <b>Pessoas Cadastradas</b>
-  <li *ngFor="let pessoa of pessoas">
-  {{pessoa}}
+  <li *ngFor="let tarefa of tarefas">
+    {{tarefa}}
   </li>
 </ul>
