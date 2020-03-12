@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CadastroPessoaSimples';
+  nome = null;
+  pessoas = ["Pessoas Cadastradas"];
+
+  adicionar() {
+    this.pessoas.push(this.nome);
+    this.nome = null;
+  }
 }
+
